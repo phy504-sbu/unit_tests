@@ -1,0 +1,4 @@
+*.o
+*~
+
+unit_test_vector2d
