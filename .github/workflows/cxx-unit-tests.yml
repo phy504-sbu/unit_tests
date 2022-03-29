@@ -15,8 +15,11 @@ jobs:
           sudo apt-get update -y -qq
           sudo apt-get -qq -y install g++>=9.3.0
 
-      - name: Build and test
+      - name: Build
         run: |
           make unit_test_vector2d
+
+      - name: Test
+        run: |
           ./unit_test_vector2d
-          if [ ! $? == 0]; then exit 1; fi
+
