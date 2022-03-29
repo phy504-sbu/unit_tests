@@ -20,7 +20,7 @@ int main() {
 
     // test not equal
 
-    assert(v1 != v2);
+    assert(v1 == v2);
 
     // test the setters and the default constructor
 
