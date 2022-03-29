@@ -1,0 +1,22 @@
+name: cxx-unit-tests
+
+on: [pull_request]
+
+jobs:
+  cxx-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+
+      - name: Install dependencies
+        run: |
+          sudo apt-get update -y -qq
+          sudo apt-get -qq -y install g++>=9.3.0
+
+      - name: Build and test
+        run: |
+          make unit_test_vector2d
+          ./unit_test_vector2d
+          if [ ! $? == 0]; then exit 1; fi
