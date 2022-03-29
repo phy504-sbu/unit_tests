@@ -19,4 +19,3 @@ jobs:
         run: |
           make unit_test_vector2d
           ./unit_test_vector2d
-          if [ ! $? == 0]; then exit 1; fi
