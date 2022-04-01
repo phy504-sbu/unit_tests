@@ -71,7 +71,10 @@ public:
         return x != vec.x || y != vec.y;
     }
 
-
+    double cross(const Vector2d& vec) {
+        return y * vec.x - x * vec.y;
+    }
+    
     // << is not a class member, but needs access to the member data
 
     friend std::ostream& operator<< (std::ostream& os, const Vector2d& v);
