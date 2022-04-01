@@ -56,7 +56,7 @@ public:
 
     Vector2d operator- () {
         Vector2d v_out;
-        v_out.x = -x;
+        v_out.x = x;
         v_out.y = -y;
         return v_out;
     }
